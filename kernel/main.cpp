@@ -7,7 +7,7 @@ using namespace fs_kernel;
 
 int main(int argc, char *argv[])
 {
-    std::cout << "Hallo" << glob::HOME_PATH << std::endl;
+    //std::cout << "Hallo" << glob::HOME_PATH << std::endl;
     Configuration c;
         std::cout << "Hallo" << c.CONF_PATH << std::endl;
 

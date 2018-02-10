@@ -1,6 +1,8 @@
 #ifndef FS_CONFIGURATION_CLASS_H
 #define FS_CONFIGURATION_CLASS_H
 
+#include <fs_inc/Logger.hpp>
+
 #include <boost/filesystem.hpp>
 
 #include <string>
@@ -20,6 +22,8 @@ public:
     path HOME_PATH;
     path CONF_DIR_BASENAME = ".furnsim";
     path CONF_PATH;
+    
+    Logger * logger;
 
     
 protected:
