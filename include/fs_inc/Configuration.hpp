@@ -6,11 +6,15 @@
 #include <boost/filesystem.hpp>
 
 #include <string>
+#include <exception>
 
 typedef boost::filesystem::path path;
 
 
 namespace fs_kernel {
+    
+class res_dir_not_found_error: public std::exception { public: virtual const char* what() const throw(); };
+    
     
 class Configuration 
 {
@@ -20,8 +24,10 @@ public:
     ~Configuration();
     
     path HOME_PATH;
-    path CONF_DIR_BASENAME = ".furnsim";
+    path CONF_DIR_BASENAME;
     path CONF_PATH;
+    path RES_DIR_BASENAME; // Ressources path
+    path RES_PATH;
     
     Logger * logger;
 
