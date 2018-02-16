@@ -21,8 +21,7 @@ namespace bofs = boost::filesystem;
 /*
  * Constructor, destructor
  */
-Configuration::Configuration()
-{
+Configuration::Configuration() {
     /* DEFINITIONS */
     this->CONF_DIR_BASENAME = ".furnsim";
     this->RES_DIR_BASENAME = "furnsim";
@@ -115,8 +114,9 @@ Configuration::~Configuration()
 
 
 
-
+/* ************************* */
 /* ******* EXCEPTION ******* */
+
 const char*  res_dir_not_found_error::what() const throw() {
     return "Resources directory not found.";
 }
